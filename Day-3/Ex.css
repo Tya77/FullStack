@@ -1,0 +1,142 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.signUp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form_signUp p{
+    line-height: 25px;
+}
+.form_signUp label{
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 14px;
+    padding-bottom: 5px;
+}
+.form_signUp input{
+    width: 240px;
+    height: 26px;
+    border: solid;
+    border-width: 2px;
+    border-color: #B6B6B6;
+    border-radius: 4px;
+}
+.form_signUp select{
+    width: 248px;
+    height: 31px;
+    border: solid;
+    border-width: 2px;
+    border-color: #B6B6B6;
+    border-radius: 4px;
+}
+.signUp_left{
+    display: grid;
+    padding-right: 30px;
+}
+.signUp_right{
+    display: grid;
+}
+.signUp_right span{
+    font-size: small;
+    color: #9d9696f9;
+}
+.btn_signUp{
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px;
+    background-color: #4CB050;
+    color: white;
+    margin-top: 20px;
+    height: 40px;
+    width: 520px;
+}
+
+/* CSS calculator */
+.calculator {
+    margin-top: 40px;
+    margin-bottom: 90px;
+    width: 300px;
+    height: 260px;
+    border: 2px solid #000;
+    background-color: #fff;
+}
+.result {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 35% 35% 35% 35%;
+}
+.item_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #D2DEEC;
+}
+.item_button.noborder_left{
+    border-left: none;
+}
+.item_button.noborder_right{
+    border-right: none;
+}
+
+/* CSS form login */
+.form_login input{
+    margin-top: 5px;
+}
+.form_login select{
+    margin-top: 10px;
+}
+.form_login button{
+    cursor: pointer;
+}
+.login_container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.form-group {
+    display: flex;
+}
+.form-group label {
+    width: 120px;
+    margin-top: 7px;
+}
+.form-group input{
+    flex: 1;
+}
+
+/* CSS form contact */
+.form_contact input{
+    height: 22px;
+    width: 140px;
+    border: solid;
+    border-width: 2px;
+    border-color: #B6B6B6;
+    border-radius: 4px;
+    margin-right: 25px;
+    margin-top: 17px;
+}
+.form_contact button{
+    height: 27px;
+    margin-top: 17px;
+    border: none;
+    border-radius: 4px;
+    background-color: #636363;
+    color: white;
+}
+    

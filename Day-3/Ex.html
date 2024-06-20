@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Ex.css" />
+    <title>Bài tập buổi 3</title>
+  </head>
+  <body>
+    <!-- Bài 1 -->
+    <div class="form_signUp" style="background-color: #cccccc; width: 550px">
+      <div style="padding: 10px; padding-bottom: 25px">
+        <h1>Try a free sample</h1>
+        <p>
+          Sign up to get a coupon you can redeem at your nearest Dancing Goat
+          cafe for a sample of the Colombia Carlos Imbachi coffee. We'll also
+          make sure you don't miss out on news introducing the new coffees that
+          we add to our store regularly.
+        </p>
+        <form
+          action="https://api-gateway.fullstack.edu.vn/action_page.php"
+          method="post"
+        >
+          <div class="signUp">
+            <div class="signUp_left">
+              <label for="firstname">First name</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="John"
+              />
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="john@example.com"
+              />
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="London" />
+              <label for="zip">ZIP code</label>
+              <input type="text" name="zip" id="zip" placeholder="EC2Y8DS" />
+            </div>
+            <div class="signUp_right">
+              <label for="lastname">Last name</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Smith"
+              />
+              <label for="address">Address</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Silk St"
+              />
+              <label for="state">
+                State
+                <span>(optional)</span>
+              </label>
+              <input type="text" name="state" id="state" />
+              <label for="country">Country</label>
+              <select name="country" id="country">
+                <option value="1">United Kingdom</option>
+                <option value="2">United Kingdom</option>
+                <option value="3">United Kingdom</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn_signUp">SEND ME FREE COFFEE</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bài 2  -->
+    <div class="calculator">
+      <div class="result">9 + 9</div>
+      <div class="buttons">
+        <div class="item_button noborder_left">1</div>
+        <div class="item_button">2</div>
+        <div class="item_button">3</div>
+        <div class="item_button noborder_right">+</div>
+        <div class="item_button noborder_left">4</div>
+        <div class="item_button">5</div>
+        <div class="item_button">6</div>
+        <div class="item_button noborder_right">-</div>
+        <div class="item_button noborder_left">7</div>
+        <div class="item_button">8</div>
+        <div class="item_button">9</div>
+        <div class="item_button noborder_right">x</div>
+        <div class="item_button noborder_left">C</div>
+        <div class="item_button">0</div>
+        <div class="item_button">=</div>
+        <div class="item_button noborder_right">/</div>
+      </div>
+    </div>
+
+    <!-- Bài 3 -->
+    <div class="form_login" style="width: 550px; margin-top: 40px">
+      <form action="" class="login">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="form-group">
+          <label for="cityofemployment">City of Employment:</label>
+          <input type="text" name="cityofemployment" id="cityofemployment" />
+        </div>
+        <div class="form-group">
+          <label for="webserver">Web server:</label>
+          <select name="webserver" id="webserver">
+            <option value="">- Choose a server -</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="form-group" style="display: flex; margin-top: 15px;">
+          <label for="role"> Please spectify your role: </label>
+          <div style="margin-top:-5px;">
+            <div>
+              <input type="radio" id="admin" name="admin" />
+              <label for="admin">Admin</label>
+            </div>
+            <div>
+              <input type="radio" id="engineer" name="engineer" />
+              <label for="engineer">Engineer</label>
+            </div>
+            <div>
+              <input type="radio" id="manager" name="manager" />
+              <label for="manager">Manager</label>
+            </div>
+            <div>
+              <input type="radio" id="guest" name="guest" />
+              <label for="guest">Guest</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="display: flex; margin-top: 15px">
+          <label for="role">Single Sign-on the following: </label>
+          <div>
+            <div style="margin-top: -5px;">
+              <input type="checkbox" id="admin" name="admin" />
+              <label for="admin">Mail</label>
+            </div>
+            <div>
+              <input type="checkbox" id="engineer" name="engineer" />
+              <label for="engineer">Payroll</label>
+            </div>
+            <div>
+              <input type="checkbox" id="manager" name="manager" />
+              <label for="manager">Self-service</label>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 10px;display: flex;align-items: center;justify-content: center;">
+          <button style="margin-right: 10px;" type="submit">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bài 4 -->
+    <div
+      class="form_contact"
+      style="background-color: #cccccc; width: 580px; margin-top: 40px"
+    >
+      <div style="padding-top: 1px; padding-left: 10px; padding-bottom: 15px">
+        <h2 style="margin-bottom: 0px">
+          Get in touch with us by filling contact form below
+        </h2>
+        <form action="" method="get">
+          <div style="display: flex">
+            <div style="display: grid">
+              <input type="text" placeholder="*Enter your full name" />
+              <input type="text" placeholder="*Enter your full name" />
+            </div>
+            <div>
+              <input type="text" placeholder="*Enter your full name" />
+            </div>
+          </div>
+          <textarea
+            style="margin-top: 17px; border-radius: 4px"
+            name=""
+            id=""
+            cols="70"
+            rows="10"
+            placeholder="* Your message here"
+          ></textarea>
+          <button>Send message</button>
+          <span>*Please fill all require form field, thanks!</span>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
