@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* CSS bài 1 */
+.form_subcribe{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 650px;
+    background-color: #334455;
+    border-radius: 7px;
+    color: white;
+}
+.form_subcribe p{
+    font-size: 12px;
+    line-height: 17px;
+}
+.form_subcribe input,button{
+    border-radius: 3px;
+    padding: 7px;
+}
+.btn_subcribe{
+    background-color: #F8DB35;
+    cursor: pointer;
+}
+.form_subcribe:hover ::placeholder{
+    color: #ffab00;
+}
+.form_subcribe:hover input{
+    background-color: #ddd;
+}
+.form_subcribe:hover button{
+    background-color: #ffab00;
+    color: white;
+}
+
+/* CSS bài 2 */
+.note *{
+    font-family: 'Times New Roman', Times, serif;
+    width: 650px;
+    line-height: 24px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* CSS bài 3 */
+.list_users li {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    list-style-type: none; 
+}
+.list_users li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 2px;
+    width: 12px; 
+    height: 12px;
+    background: url('./images/icon1.png') ;
+    background-size: cover;
+}
+
+/* CSS bài 4 */
+.js_map{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 17px;
+    color: #636675;
+    width: 650px;
+}
+.js_map p{
+    padding: 15px 15px 15px 0px;
+    line-height: 22px;
+    font-size: 15px;
+}
+.js_map code{
+    background-color: #E6E8FC;
+    border-radius: 5px;
+    padding: 2px;
+}
+.js_map a{
+    color: #407EC7;
+}
+.learn{
+    border: solid 1px;
+    border-radius: 4px;
+    padding: 5px 25px 20px 25px;
+}
