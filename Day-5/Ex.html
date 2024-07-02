@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 5</title>
+    <link rel="stylesheet" href="./Ex.css" />
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Bài 1 -->
+    <div class="ex01_content">
+      <h2>Hey there</h2>
+      <p style="color: #c4c4c6">
+        <span style="color: red; font-family: Arial, Helvetica, sans-serif"
+          >We'd like hear from you.</span
+        >
+        Send us your message or just say hy with our contact form or directly
+        via phone, we love to chat.
+      </p>
+
+      <div class="input_content">
+        <div class="input_wrapper">
+          <label for="yourname">
+            <i class="fa-solid fa-user"></i>
+          </label>
+          <input
+            type="text"
+            id="yourname"
+            placeholder="Your name"
+            style="position: relative"
+          />
+          <span style="position: absolute; right: 2px; bottom: 3px; z-index: 99"
+            ><i
+              style="color: #c4c4c6; font-size: 6px"
+              class="fa-solid fa-star"
+            ></i
+          ></span>
+          <div class="hidden">Enter your name</div>
+          <span class="x_hidden"
+            ><i
+              style="color: #c4c4c6; font-size: 8px"
+              class="fa-solid fa-xmark"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="input_content">
+        <div class="input_wrapper">
+          <label for="domain">
+            <i style="font-size: 13px" class="fa-solid fa-envelope"></i>
+          </label>
+          <input type="email" id="domain" placeholder="your@domain.com" />
+          <span style="position: absolute; right: 2px; bottom: 3px; z-index: 99"
+            ><i
+              style="color: #c4c4c6; font-size: 6px"
+              class="fa-solid fa-star"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="input_content">
+        <div class="input_wrapper">
+          <label for="numberphone">
+            <i style="font-size: 17px" class="fa-solid fa-mobile"></i>
+          </label>
+          <input
+            type="number"
+            id="numberphone"
+            placeholder="+44 00 123"
+            checked
+          />
+          <span style="position: absolute; right: 2px; bottom: 3px; z-index: 99"
+            ><i
+              style="color: #c4c4c6; font-size: 6px"
+              class="fa-solid fa-star"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="input_content">
+        <div class="input_wrapper">
+          <label for="subject">
+            <i style="font-size: 17px" class="fa-solid fa-ghost"></i>
+          </label>
+          <input type="text" id="subject" placeholder="Subject" />
+          <span style="position: absolute; right: 2px; bottom: 3px; z-index: 99"
+            ><i
+              style="color: #c4c4c6; font-size: 6px"
+              class="fa-solid fa-star"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="input_content">
+        <div class="input_wrapper">
+          <label for="message" style="padding-top: 117px">
+            <i style="font-size: 14px" class="fa-regular fa-comment"></i>
+          </label>
+          <textarea name="message" id="message" rows="8" placeholder="message">
+          </textarea>
+          <span style="position: absolute; right: 2px; top: 0px; z-index: 99"
+            ><i
+              style="color: #c4c4c6; font-size: 6px"
+              class="fa-solid fa-star"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="container_btn">
+        <div>
+          <input type="checkbox" id="copy" name="copy" />
+          <label for="copy" style="font-size: 12px; color: #c4c4c6"
+            >Send me a copy of this message</label
+          >
+        </div>
+        <button class="send-button">SEND</button>
+      </div>
+    </div>
+
+    <!-- Bài 2 -->
+    <div class="ex02">
+      <div class="ex02_section">
+        <input type="checkbox" id="ex021" class="ex02_toggle" />
+        <label for="ex021" class="ex02_label">How to set random colors?</label>
+        <div class="ex02_content">
+          <p>To set random colors:</p>
+          <ol>
+            <li>Add jag-faq-random-colors class.</li>
+            <li>
+              To change color, open theme(num).css, find
+              "jag-faq-random-colors".
+            </li>
+            <li>You can change color from here.</li>
+          </ol>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+      <div class="ex02_section">
+        <input type="checkbox" id="ex022" class="ex02_toggle" />
+        <label for="ex022" class="ex02_label"
+          >How to use theme colors and add new theme color?</label
+        >
+        <div class="ex02_content">
+          <p>HPC Full Stack</p>
+        </div>
+      </div>
+      <div class="ex02_section">
+        <input type="checkbox" id="ex023" class="ex02_toggle" />
+        <label for="ex023" class="ex02_label">How to change icon?</label>
+        <div class="ex02_content">
+          <p>HPC Full Stack</p>
+        </div>
+      </div>
+    </div>
+    <!-- Bài 3 -->
+    <center>
+      <div style="margin-top: 30px" class="ex03">
+        <h3 style="margin: 0">Take a look at our services</h3>
+        <span style="font-size: 10px"
+          >Duis fringilla erot sit amet sapien dignissim hendreit vel sit amet
+          libero.</span
+        >
+        <div class="ex03_wrapper">
+          <div class="ex03_content">
+            <span class="icon">
+              <i class="fa-solid fa-camera"></i>
+            </span>
+            <p style="font-weight: 700; margin-top: 35px">Photography</p>
+            <p style="color: #acabab; font-size: 11px; line-height: 15px">
+              Prasent vitae ligula nulla. Curabitur porta dolor vitae felis
+              vestibulum
+            </p>
+            <button class="ex03_btn">Read More</button>
+          </div>
+          <div class="ex03_content">
+            <span class="icon">
+              <i class="fa-solid fa-laptop"></i>
+            </span>
+            <p style="font-weight: 700; margin-top: 35px">Web Designing</p>
+            <p style="color: #acabab; font-size: 11px; line-height: 15px">
+              Prasent vitae ligula nulla. Curabitur porta dolor vitae felis
+              vestibulum
+            </p>
+            <button class="ex03_btn">Read More</button>
+          </div>
+          <div class="ex03_content">
+            <span class="icon">
+              <i class="fa-solid fa-video"></i>
+            </span>
+            <p style="font-weight: 700; margin-top: 35px">Videography</p>
+            <p style="color: #acabab; font-size: 11px; line-height: 15px">
+              Prasent vitae ligula nulla. Curabitur porta dolor vitae felis
+              vestibulum
+            </p>
+            <button class="ex03_btn">Read More</button>
+          </div>
+        </div>
+      </div>
+    </center>
+
+    <!-- Bài 4 -->
+    <div
+      style="
+        margin-top: 30px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+      "
+      class="ex04"
+    >
+      <img
+        class="img_ex04"
+        src="./image/maxresdefault.jpg"
+        alt="ảnh React JS"
+      />
+      <div class="bg_blur">
+        <p style="font-weight: 700">Blurred Background</p>
+        <span style="font-size: 10px"
+          >By <a href="#" style="color: black"> HPC Fullstack</a></span
+        >
+      </div>
+    </div>
+  </body>
+</html>

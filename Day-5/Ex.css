@@ -1,0 +1,215 @@
+/* CSS bài 1 */
+@font-face {
+    font-family: Poppins;
+    src: url(../Day-5/font/Poppins-Medium.ttf);
+}
+.ex01_content h2{
+    font-family:"Poppins";
+}
+.input_content{
+    display: flex;
+    border: 1.3px solid #C5C5C5;
+    padding: 4px;
+    padding-left: 0px;
+    margin-top: 16px;
+    width: 950px;
+}
+.input_content label{
+    background-color: #C5C5C5;
+    padding-left: 6px;
+    padding-top: 5px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+}
+.input_content:hover{
+    border-color: #343334;
+}
+.input_content:hover label{
+    background-color: #343334;
+}
+.input_content input{
+    border: none;
+    width: 915px;
+}
+.input_content input:focus,textarea:focus{
+    border: none;
+    outline: none;
+}
+.input_content input::placeholder{
+    padding-left: 10px;
+    color: #c4c4c6;
+}
+.input_content i{
+    color: white;
+    font-size: 15px;
+}
+.input_wrapper{
+    width: 950px;
+    position: relative;
+}
+.input_content textarea{
+    border: none;
+    width: 915px;
+}
+.container_btn {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+}
+
+.send-button {
+    background-color: #FF4E42;
+    color: white;
+    border: none;
+    padding: 5px 16px;
+    cursor: pointer;
+}
+.hidden{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 14px;
+    background-color: #343334;
+    color: white;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    bottom: 199%;
+    left: 2%;
+    align-items: center;
+    opacity: 0;
+}
+.hidden::after{
+    content:"" ;
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    bottom: -19px;
+    left: 37px;
+    border-color: #343334 transparent transparent transparent;
+}
+.input_wrapper:hover .hidden{
+    opacity: 1;
+}
+.input_wrapper:hover .fa-solid.fa-star{
+    opacity: 0;
+}
+.x_hidden{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 24%;
+    right: 0.5%;
+    align-items: center;
+    opacity: 0;
+}
+.input_wrapper:hover .x_hidden{
+    opacity: 1;
+}
+
+
+/* CSS bài 2 */
+.ex02{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    /* background-color: white; */
+    /* border-radius: 7px; */
+}
+.ex02_section{
+    margin-bottom: 10px;
+ }
+.ex02_label {
+    display: block;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+}
+
+.ex02_toggle {
+    display: none;
+}
+
+.ex02_toggle + .ex02_label::after {
+    content: "+"; 
+    font-size: 20px;
+    position: absolute;
+    left: 3px;
+    top: 6px;
+}
+
+.ex02_toggle:checked + .ex02_label::after {
+    content: "-"; 
+}
+
+.ex02_content {
+    display: none;
+}
+
+.ex02_toggle:checked + .ex02_label + .ex02_content {
+    display: block;
+}
+
+/* CSS bài 3 */
+.ex03{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.ex03_wrapper{
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+}   
+.ex03_content{
+    width: 15.333333%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 8px;
+    padding: 48px 10px 22px 10px;
+    box-shadow: 0px 0px 5px 5px #99999938;
+}
+.icon{
+    color: #F1A83A;
+    border: 1px solid #F1A83A;
+    border-radius: 50%;
+    padding: 16px;
+    font-size: 25px;
+    /* margin-top: 100px; */
+}
+.ex03_btn{
+    border: none;
+    background-color: #F1A83A;
+    color: white;
+    font-size: 10px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* CSS bài 4 */
+.img_ex04{
+    position: relative;
+    height: 400px;
+    border-radius: 7px;
+}
+.bg_blur{
+    position: absolute;
+    background-color: #9C95B6;
+    width: 235px;
+    height: 152px;
+    top: 19%;
+    right: 64%;
+    opacity: 0.7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    box-shadow: 0px 0px 5px 5px #17171d82;
+
+}
