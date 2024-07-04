@@ -1,0 +1,200 @@
+/* CSS bài 1 */
+*{
+    padding: 0;
+    margin: 0;
+}
+.service_Layout{
+    font-family: "Roboto", sans-serif;
+    background-color: #ebf5fe;
+    padding: 10px 60px;
+    display: flex;
+    /* display: grid; */
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+.item_wrapper{
+    padding: 16px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-color: white;
+}
+.service_Layout .item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* .item_wrapper:hover{
+    border: 2px solid #E3626D;
+} */
+.item span{
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+    font-size: 18px;
+    z-index: 99;
+    /* box-shadow: 10px 10px 5px #E3626D; */
+}
+.icon{
+    position: absolute;
+    top: 12px;
+    left: 13px;
+}
+.service_Layout.top .item_wrapper:nth-child(1):hover {
+    border: 2px solid #E3626D; 
+}
+.service_Layout.top .item_wrapper:nth-child(2):hover {
+    border: 2px solid #54aba3; 
+}
+.service_Layout.top .item_wrapper:nth-child(3):hover {
+    border: 2px solid #e38b34; 
+}.service_Layout.bottom .item_wrapper:nth-child(1):hover {
+    border: 2px solid #326CCF; 
+}.service_Layout.bottom .item_wrapper:nth-child(2):hover {
+    border: 2px solid #7627CD; 
+}.service_Layout.bottom .item_wrapper:nth-child(3):hover {
+    border: 2px solid #6F9132; 
+}
+.service_Layout.top .item_wrapper:nth-child(1) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e3626db3;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+.service_Layout.top .item_wrapper:nth-child(2) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #54aba3;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+.service_Layout.top .item_wrapper:nth-child(3) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e38b34;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+.service_Layout.bottom .item_wrapper:nth-child(1) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #326CCF;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+.service_Layout.bottom .item_wrapper:nth-child(2) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7627CD;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+.service_Layout.bottom .item_wrapper:nth-child(3) .item span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6F9132;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5; 
+}
+
+.title{
+    font-weight: bold;
+    color: #393739;
+    line-height: 20px;
+}
+.content{
+    margin-top: 12px;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+}
+.service_Layout .item_wrapper a{
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+
+/* Css bài 2 */
+.ex02_header{
+    font-family: "Poppins", sans-serif;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    color: #1d2739e0;
+    gap: 216px;
+}
+.ex02_category{
+    background-color: #F5F5F5;
+    border-radius: 99px;
+    font-size: 19px;
+    padding: 15px 35px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+/* .ex02_header .list_item{
+    padding: 0 120px;
+} */
+.ex02_header .list_item ul{
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    font-weight: 600;
+}
+.ex02_header .list_item li{
+    cursor: pointer;
+}
+.ex02_header .list_item span{
+    position: relative;
+}
+.ex02_header .list_item i{
+    font-size: 10px;
+    position: absolute;
+    top: 6.5px;
+    left: 3px;
+}
+.ex02_btn button{
+    font-weight: 700;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(47,88,239,1) 0%, rgba(114,94,235,1) 35%, rgba(179,101,231,1) 98%);
+}
