@@ -8,8 +8,6 @@
 * a{
     text-decoration: none;
 }
-.banner{
-}
 .banner_content{
     position: absolute;
     color: #3f3424;
@@ -36,7 +34,6 @@
 
 /* CSS bài 2 */
 .profile{
-    /* margin-bottom: 50px; */
     margin-top: 50px;
     position: relative;
     width: 100%;
@@ -148,7 +145,7 @@
     gap: 15px;
 }
 .item_bds{
-position: relative;
+    position: relative;
 }
 .ex03 .list_bds .item_bds .overlay{
     border-radius: 5px;
