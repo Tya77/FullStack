@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.ex01_wrapper{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.ex01_wrapper .item h1{
+    font-family: "Space Grotesk";
+    margin-bottom: 12px;
+}
+.ex01_wrapper .item p {
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 44px;
+}
+.title{
+    display: flex;
+    gap: 15px;
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 99px;
+    background-color: gray;
+    position: relative;
+}
+.dot_mini{
+    background-color: chartreuse;
+    padding: 5px;
+    border-radius: 99px;
+    position: absolute;
+    top: 4.5px;
+    left: 4.9px;
+}
+.item_content{
+    width: 298px;
+    text-align: right;
+}
+.dot::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 130px;
+    position: absolute;
+    background-color: #f4f2f0;
+    left: 50%;
+    top: 32px;
+}
+.item_content span {
+    border-radius: 99px;
+    padding: 4px 11px;
+    background-color: #F3F3F3;
+    transition: background-color 0.8s ease;
+
+}
+
+.item_content span:hover{
+    background-color: #a26f5a;
+    color: #fff;
+}
+
+/* Css bài 2 */
+
+/* Css bài 3 */
+
+
+
