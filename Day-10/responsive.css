@@ -1,0 +1,306 @@
+@media (min-width:992px) {
+    .grover_navbar .grover_container{
+        flex-wrap: nowrap !important;
+
+    }
+    .navbar_btn_icon {
+        display: none;
+    }
+    .navbar_list_wrapper{
+        display: flex !important;
+    }
+    .navbar_item_list{
+        flex-direction: row;
+    }
+    .feature2_content_left{
+        order: -1 !important;
+    }
+}
+
+
+/*  */
+@media screen and (max-width: 991px) {
+    .footer_wrapper{
+        padding: 20px 0 0 0;
+    }
+    .footer_top{
+        text-align: center;
+    }
+    .footer_logo_img{
+        margin: 0 auto;
+    }
+    .footer_content_txt{
+        max-width: 100%;
+    }
+    .footer_bottom{
+        text-align: center;
+    }
+    .footer_row_right_item,
+    .footer_row_right,
+    .footer_row_left{
+        width: 100%;
+        max-width: 100%;
+    }
+    .grover_container{
+        padding: 0 25px;
+    }
+    .navbar_list_wrapper{
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 1199px) {
+    .footer_content_txt {
+        font-size: 14px;
+        max-width: 95%;
+    }
+    .footer_list_link{
+        font-size: 14px;
+    }
+    .header_red{
+        font-size: 38px
+    }
+    .item_content h1{
+        font-size: 38px !important;
+    }
+    .row_item_content{
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .header_now_btn {
+        width: 160px;
+        font-size: 16px;
+    }
+    .header_process_btn {
+        width: 200px;
+        font-size: 16px;
+        justify-content: space-evenly;
+    }
+    .row_item1{
+        width: 100%;
+    }
+    .item_ship_content_bg{
+        height: 105%;
+    }
+    .feature2_grover_content{
+        margin: 100px 0 20px 0;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .footer_content_txt{
+        max-width: 100%;
+    }
+    .navbar_item{
+        margin: 12px 16px;
+        text-align: center;
+    }
+    .search_form{
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .item_ship_content_bg{
+        width: 190px;
+    }
+    .item_ship_content{
+        margin: 0;
+        padding: 30px 22px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .faster {
+        margin: 0 auto 20px auto;
+    }
+    .item_content{
+        text-align: center;
+    }
+    .grover_wrapper{
+        padding: 50px 0;
+    }
+    .item_ship_content_bg{
+        width: 96%;
+    }
+    .item_ship_content{
+        margin: 10px 0;
+    }
+    .feature_row_right_content{
+        margin: 80px 0 20px 0;
+        text-align: center;
+    }
+    .feature_row_right_content_title2{
+        max-width: 100% !important;
+    }
+    .feature_row_right_btn{
+        margin: 0 auto;
+    }
+    .feature2_grover_content{
+        margin: 80px 0 20px 0;
+        text-align: center;
+    }
+    .feature2_content_left_title2{
+        max-width: 100% !important;
+    }
+    .feature2_content_left_btn{
+        margin: 0 auto;
+    }
+    .cta_wrapper{
+        padding: 50px 0;
+    }
+    .cta_conten_wrapper{
+        text-align: center;
+    }
+    .cta_content_title2,
+    .cta_content_p{
+        max-width: 100% !important;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .faster_title {
+        font-size: 14px;
+    }
+    .header_red,
+    .item_content h1{
+        font-size: 30px !important
+    }
+    .row_item_content{
+        font-size: 14px;
+    }
+    .header_now_btn{
+        padding: 14px 10px;
+    }
+    .service_heading_title,
+    .feature_row_right_content_title,
+    .feature_row_right_content_p,
+    .feature2_content_left_p,
+    .cta_content_title{
+        font-size: 14px !important;
+    }
+    .cta_app{
+        font-size: 14px;
+        padding: 12px 2px;
+        /* width: 160px; */
+    }
+    .service_heading_title2{
+        font-size: 24px !important;
+    }
+    .feature_row_right_content_title2{
+        font-size: 24px !important;
+    }
+    .feature2_content_left_title{
+        font-size: 14px !important;
+    }
+    .feature2_content_left_title2,
+    .cta_content_title2{
+        font-size: 24px !important;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .header_now_btn {
+        width: 100%;
+        font-size: 12px;
+        padding: 20px 12px;
+    }
+    .header_process_btn{
+        width: 100%;
+        font-size: 12px;
+    }
+    .cta_btn{
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 1399px) {
+    .item_content h1{
+        font-size: 48px;
+        line-height: 58px;
+    }
+    .service_heading_title{
+        font-size: 16px;
+    }
+    .service_heading_title2{
+        font-size: 32px;
+        line-height: 44px;
+        max-width: 100%;
+    }
+    .item_ship_content_bg{
+        width: 96%;
+    }
+    .item_ship_content_bg{
+        width: 465px;
+        height: 100%;
+    }
+    .item_ship_content{
+        margin: 10px;
+        padding: 40px 26px;
+    }
+    .item_ship,
+    .row_ship{
+        width: 100%;
+    }
+    .feature_row_right,
+    .feature_row_left{
+        width: 100%;
+    }
+    .feature_row_right_content_title{
+        font-size: 16px;
+    }
+    .feature_row_right_content_title2{
+        font-size: 32px;
+        line-height: 44px;
+        max-width: 90%;
+    }
+    .feature_row_right_content_p{
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .feature_row_right_btn{
+        width: 180px;
+        padding: 18px 20px;
+        font-size: 16px;
+    }
+    .feature2_content_left{
+        order: 6 !important;
+        width: 100%;
+    }
+    .feature2_content_right{
+        width: 100%;
+    }
+    .feature2_content_left_title,
+    .cta_content_title{
+        font-size: 16px;
+    }
+    .feature2_content_left_title2{
+        font-size: 32px;
+        line-height: 44px;
+        max-width: 90%;
+    }
+    .feature2_content_left_p{
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .feature2_content_left_btn{
+        width: 180px;
+        padding: 18px 20px;
+        font-size: 16px;
+    }
+    .cta_content{
+        width: 100%;
+    }
+    .cta_content_title2{
+        font-size: 32px;
+        line-height: 44px;
+        max-width: 90%;
+    }
+    .cta_content_p{
+        font-size: 16px;
+        max-width: 90%;
+    }
+    .cta_app{
+        font-size: 16px;
+        padding: 12px 2px;
+    }
+    .row_app{
+        width: 100%;
+    }
+}
+
+

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ex01_wrapper{
+    background-color: #0697EB;
+    color: #0697EB;
+    height: 500px;
+    /* position: relative; */
+    
+}
+.ex01_wrapper  input{
+    display: none;
+}
+.switch{
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: block;
+    left: -4%;
+    top: -12%;
+    transition: transform 0.5s ease, border-radius 0.5s ease;
+      z-index: 1;
+}
+.switch span{
+    position: absolute;
+    z-index: 99;
+    left: 75px;
+    top: 75px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn_hi{
+    opacity: 0;
+    transition: all  0.2s linear;
+    z-index: 99;
+}
+.nav{
+    position: absolute;
+    font-weight: bold;
+    left: 35px;
+    top: 55px;
+    display: none;
+    z-index: 99;
+    /* color: red; */
+
+}
+.nav li{
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all  0.2s linear;
+
+}
+.title{
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    right: 7%;
+    text-align: center;
+}
+.nav li:focus{
+    background-color: rgb(220, 218, 218);
+    color: #333;
+    width: 120px;
+    padding: 3px 0;
+}
+input:checked ~ .switch .btn_hi{
+    opacity: 1;
+    rotate: 90deg;
+}
+input:checked ~ .switch .btn{
+    display: none;
+}
+input:checked ~ .nav{
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: -8%;
+    left: -4%;
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+input:checked ~ .overlay {
+    width: 104vw; 
+    height: 560px; 
+    border-radius: 0; 
+}
