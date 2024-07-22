@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link rel="stylesheet" href="./Ex.css" />
+  </head>
+  <body>
+    <div class="landing">
+      <input type="radio" id="login" name="landing-form" checked hidden />
+      <input type="radio" id="register" name="landing-form" hidden />
+      <div class="landing-infor">
+        <div class="logo">
+            <i class="fa-solid fa-ghost"></i>
+          </div>
+          <h2 class="landing-title">Welcome to</h2>
+          <h1 class="landing-title2">VIKINGER</h1>
+          <p class="landing-text">
+              The next generation social network & community! Connect with
+              your friends and play with our quests and badges
+              gamification system!
+          </p>
+          <div class="tab-switch">
+              <label class="lb-login" for="login">Login</label>
+              <label class="lb-register" for="register">Register</label>
+          </div>
+      </div>
+      <div class="landing-form">
+        <!-- Form Login -->
+        <div class="form-box login">
+          <img class="form-box-img" src="./img/rocket.webp" alt="img" />
+          <h2>Account Login</h2>
+          <form action="" class="form">
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="text" id="login-username" placeholder=" " />
+                  <label for="login-username"> Username or Email </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="password" id="login-password" placeholder=" " />
+                  <label for="login-password"> Password </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content remember">
+              <div class="form-content">
+                <div class="check-box-wrapper">
+                  <input
+                    type="checkbox"
+                    name="login-remember"
+                    id="login-remember"
+                    checked
+                  />
+                  <div class="checkbox-box">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                  <label for="login-remember">Remember Me</label>
+                </div>
+              </div>
+              <div class="form-content">
+                <a class="form-link" href="#">Forgot Password?</a>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <button class="btn-item-login">Login to your Account!</button>
+              </div>
+            </div>
+          </form>
+          <p class="note">Login with your Social Account</p>
+          <div class="app-link">
+            <a class="app facebook" href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a class="app twitter" href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a class="app twitch" href="#">
+              <i class="fa-brands fa-twitch"></i>
+            </a>
+            <a class="app youtube" href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Form Register -->
+        <div class="form-box register">
+          <img class="form-box-img" src="./img/rocket.webp" alt="img" />
+          <h2>Create your Account!</h2>
+          <form action="" class="form">
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="text" id="register-email" placeholder=" " />
+                  <label for="register-email"> Your Email </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="text" id="register-username" placeholder=" " />
+                  <label for="register-username"> Username </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="password"
+                    id="register-password"
+                    placeholder=" "
+                  />
+                  <label for="register-password"> Password </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="password"
+                    id="register-password"
+                    placeholder=" "
+                  />
+                  <label for="register-password"> Repeat Password </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-content remember">
+              <div class="form-content">
+                <div class="check-box-wrapper">
+                  <input
+                    type="checkbox"
+                    name="login-remember"
+                    id="login-remember"
+                    checked
+                  />
+                  <div class="checkbox-box">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                  <label for="register-send"
+                    >Send me news and updates via email</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="form-content">
+              <div class="form-item">
+                <button class="btn-item-register">Register Now!</button>
+              </div>
+            </div>
+          </form>
+          <p class="form-text">
+            You'll receive a confirmation email in your inbox with a link to
+            activate your account. If you have any problems,
+            <a href="#">contact us</a>
+            !
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

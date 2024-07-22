@@ -1,0 +1,77 @@
+@media screen and (max-width:1500px) {
+    .landing-infor{
+        left: 6%;
+    }
+    .landing-infor .landing-text{
+        margin-top: 10px !important;
+    }
+    .tab-switch{
+        margin-top: 40px !important;
+    }
+    .landing-form{
+        right: 80px;
+    }
+}
+@media screen and (max-width:1365px) {
+    .landing{
+        padding: 80px 0 100px;
+        position: static !important;
+    }
+    .landing-infor{
+        width: 100% !important;
+        position: static !important;
+    }
+    .landing-infor .landing-text{
+        display: none;
+    }
+    .landing-form{
+        width: 100% !important;
+        margin-top: 80px;
+        position: static !important;
+    }
+    .landing-form .form-box {
+        margin: 0 auto;
+        position: static !important;
+        transform: translate(0px, 0px);
+        top: 0;
+        transition: 0 !important;
+    }
+    .landing-form .form-box{
+        margin-top: 0 !important
+    }
+    .landing-form .form-box img{
+        display: none;
+    }
+    .landing #login:checked ~  .landing-form .form-box.login {
+        display: block;
+      }
+      .landing #login:checked ~  .landing-form .form-box.register {
+        display: none;
+      }
+    .landing #register:checked ~  .landing-form .form-box.register {
+        display: block;
+      }
+    .landing #register:checked ~  .landing-form .form-box.login {
+        display: none;
+      }
+}
+@media screen and (max-width: 600px) {
+    .landing-form .form-box {
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .landing-form {
+        margin-top: 60px;
+    }
+    .landing-infor .landing-title2 {
+        font-size: 60px !important;
+    }
+    .form-box {
+        padding: 40px 32px !important;
+    }
+    .tab-switch{
+        width: 90%;
+        margin: 20px auto 0 !important;
+    }
+}
