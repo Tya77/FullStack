@@ -72,12 +72,12 @@
         font-size: 16px;
     }
     .header_process_btn {
-        width: 200px;
+        /* width: 200px; */
         font-size: 16px;
         justify-content: space-evenly;
     }
     .row_item1{
-        width: 100%;
+        width: 50%;
     }
     .item_ship_content_bg{
         height: 105%;
@@ -153,6 +153,41 @@
     .cta_content_p{
         max-width: 100% !important;
     }
+    
+}
+@media screen and (max-width: 768px) {
+    .row_item1 {
+        width: 100%;
+    }
+    .feature_row_right, .feature_row_left {
+        width: 100%;
+    }
+    .feature2_content_left,
+    .feature2_content_right  {
+        width: 100%;
+    }
+    .feature2_grover_content,
+    .feature_row_right,
+    .cta_content_txt{
+        text-align: center;
+    }
+    .feature2_content_left_btn,
+    .feature_row_right_btn{
+        margin: 0 auto;
+    }
+    .cta_content
+     {
+        width: 100%;
+    }
+    .item_ship, .row_ship {
+        width: 100%;
+    }
+    .frover_container .row_item2_content_left{
+        margin-left: auto !important;
+    }
+    .frover_container .row_item2_content_right{
+        margin-right: auto;
+    }
 }
 @media only screen and (max-width: 420px) {
     .faster_title {
@@ -208,7 +243,26 @@
         justify-content: space-evenly;
     }
 }
+@media only screen and (max-width: 575px) {
+    
+}
 @media (max-width: 1399px) {
+    .grover_navbar{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .header_grocery{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .grover_wrapper,
+    .feature_wrapper,
+    .feature2_wrapper,
+    .cta_wrapper,
+    .footer_wrapper{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
     .item_content h1{
         font-size: 48px;
         line-height: 58px;
@@ -225,7 +279,9 @@
         width: 96%;
     }
     .item_ship_content_bg{
-        width: 465px;
+        /* width: 465px; */
+        width: 100%;
+
         height: 100%;
     }
     .item_ship_content{
@@ -234,11 +290,11 @@
     }
     .item_ship,
     .row_ship{
-        width: 100%;
+        /* width: 100%; */
     }
     .feature_row_right,
     .feature_row_left{
-        width: 100%;
+        /* width: 100%; */
     }
     .feature_row_right_content_title{
         font-size: 16px;
@@ -259,10 +315,10 @@
     }
     .feature2_content_left{
         order: 6 !important;
-        width: 100%;
+        /* width: 100%; */
     }
     .feature2_content_right{
-        width: 100%;
+        /* width: 100%; */
     }
     .feature2_content_left_title,
     .cta_content_title{
@@ -283,7 +339,7 @@
         font-size: 16px;
     }
     .cta_content{
-        width: 100%;
+        /* width: 100%; */
     }
     .cta_content_title2{
         font-size: 32px;
