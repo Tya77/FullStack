@@ -287,7 +287,9 @@ p {
   position: absolute;
   width: 240px;
   top: 32%;
-  left: 19%;
+}
+.product-img {
+  position: relative;
 }
 .product-btn {
   background-color: #46b20f;
