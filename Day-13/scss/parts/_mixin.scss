@@ -1,0 +1,6 @@
+@mixin elip($position:absolute, $size: 235px, $border-radius: 50%){
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
