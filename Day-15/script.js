@@ -17,3 +17,11 @@ function changeColor() {
 }
 
 changeColor();
+
+
+// 
+var fullname = "kiều duy tùng";
+//Chuyển thành Kiều Duy Tùng
+var fixname = fullname.replace("k", "K").replace("d", "D").replace("t", "T");
+
+console.log(fixname);
