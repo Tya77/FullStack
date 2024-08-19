@@ -25,6 +25,8 @@ function highlightNextWord() {
 
 highlightNextWord();
 
+
+
 //
 var fullname = "kiều duy tùng";
 var word = fullname.split(" ");
