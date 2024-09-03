@@ -78,6 +78,6 @@ var html = content
   </div>
   `
   )
-  .join();
+  .join("");
 
 container.innerHTML = html;
