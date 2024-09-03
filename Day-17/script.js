@@ -70,10 +70,14 @@ var average = function (arr) {
     return "Không có số nguyên tố";
   }
 };
-
-// Ví dụ sử dụng
-var Arr2 = [-2, 3, 6, 16, 5, -9];
 console.log(average(Arr2));
+
+
+// Cách 2
+if(check)
+
+
+
 
 // }
 
