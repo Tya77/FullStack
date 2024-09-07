@@ -41,8 +41,8 @@ function createCustomer(name, age, address) {
 function createCustomers(customers) {
   return customers
     .map((customer) => {
-      const nameI = customer.name.split(" ");
-      const shortName = `${nameI[0]} ${nameI[nameI.length - 1]}`;
+      var nameI = customer.name.split(" ");
+      var shortName = `${nameI[0]} ${nameI[nameI.length - 1]}`;
       return { ...customer, shortName };
     })
     .sort((a, b) => a.age - b.age);
@@ -58,7 +58,7 @@ function handleRegister(name, password, email) {
     return;
   }
 
-  const newUser = {
+  var newUser = {
     name,
     password,
     email,
@@ -71,7 +71,7 @@ function handleRegister(name, password, email) {
 }
 
 function handleLogin(email, password) {
-  const user = data.find(
+  var user = data.find(
     (user) => user.email === email && user.password === password
   );
 
@@ -83,7 +83,6 @@ function handleLogin(email, password) {
   }
 }
 
-// Đăng ký người dùng
 const dataRegister = handleRegister(
   "Nguyen Van A",
   "123456",
