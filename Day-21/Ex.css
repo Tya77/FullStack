@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.form-main {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.form-main.active {
+  display: flex;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6) none;
+  z-index: -1;
+}
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 -24px;
+}
+.form-box {
+  padding: 24px;
+  padding-top: 0;
+  border-radius: 3px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  background-color: #fff;
+}
+.form {
+  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.or {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.or::after {
+  content: "";
+  border-top: 1px solid rgba(238, 238, 238, 1);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -20;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.warning {
+  color: rgba(205, 48, 56, 1);
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+input {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 2.75rem;
+  border-width: 1px;
+  margin-top: 8px;
+}
+.eye {
+  position: absolute;
+  right: 14px;
+  top: 21px;
+  cursor: pointer;
+}
+.forget-pass {
+  color: rgba(128, 128, 128, 1);
+  text-align: right;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+::placeholder {
+  font-weight: 700;
+  opacity: 0.6;
+}
+.btn {
+  color: #fff;
+  font-weight: 600;
+  background-color: rgba(26, 121, 0, 1);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.login-wrapper {
+  display: none;
+}
+.form.login-wrapper.active {
+  display: flex;
+}
+.loggin.active {
+  background-color: rgba(26, 121, 0, 1);
+  color: #fff;
+
+}
+.register.active {
+  background-color: rgba(26, 121, 0, 1);
+  color: #fff;
+
+}
+.login-register.active {
+  display: flex;
+}
+.register-wrapper {
+  display: none;
+}
+.active {
+  display: block;
+}

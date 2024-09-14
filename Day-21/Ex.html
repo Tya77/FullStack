@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Ex.css" />
+    <title>Bài tập buổi 21</title>
+  </head>
+  <body>
+    <div class="form-main">
+      <div class="overlay"></div>
+      <div class="form-box">
+        <div class="form-header">
+          <div
+            class="loggin"
+            style="cursor: pointer; width: 50%; padding: 14px 0"
+          >
+            <h4>Đăng nhập</h4>
+          </div>
+          <div
+            class="register"
+            style="cursor: pointer; width: 50%; padding: 14px 0"
+          >
+            <h4>Đăng kí</h4>
+          </div>
+        </div>
+        <div class="form-body">
+          <!-- form-login -->
+          <div class="form login-wrapper">
+            <div style="text-align: center; font-size: 14px; margin-top: 10px">
+              với các tài khoản mạng xã hội
+            </div>
+            <img src="./img/ggfb.png" alt="ggfb" srcset="" />
+            <div class="or">
+              <span style="padding: 0 16px; background-color: #fff">
+                hoặc
+              </span>
+            </div>
+            <div class="warning warning-acc"></div>
+
+            <form class="form-login">
+              <label class="lb-email label">
+                <span class="lb-name">Email</span>
+                <input
+                  id="email-login"
+                  class="email-input text-input"
+                  type="email"
+                  placeholder="Email"
+                />
+                <div class="warning warning-email-login"></div>
+              </label>
+              <label class="lb-pass label">
+                <span class="name-lb">Mật khẩu</span>
+                <div style="position: relative">
+                  <input
+                    id="password-login"
+                    type="password"
+                    placeholder="Mật khẩu"
+                    class="pass-input text-input"
+                  />
+                  <span class="eye"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="warning warning-password-login"></div>
+              </label>
+              <a class="forget-pass" href="#">Quên mật khẩu?</a>
+              <div class="btn">
+                <button class="btn-login btn">Đăng nhập</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form-login -->
+
+          <!-- form-register -->
+          <div class="form register-wrapper">
+            <div
+              style="
+                text-align: left;
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+              "
+            >
+              Hoàn thành đăng ký và bắt đầu trải nghiệm ngay!
+            </div>
+
+            <form class="form-register">
+              <label class="lb-name label">
+                <span class="lb-name">Họ và tên</span>
+                <input
+                  id="name-register"
+                  class="name-input text-input"
+                  type="text"
+                  placeholder="Họ và tên"
+                />
+                <div class="warning warning-name-register"></div>
+              </label>
+              <label class="lb-email label">
+                <span class="lb-name">Email</span>
+                <input
+                  id="email-register"
+                  class="email-input text-input"
+                  type="email"
+                  placeholder="Email"
+                />
+                <div class="warning warning-email-register"></div>
+              </label>
+              <label class="lb-pass label">
+                <span class="name-lb">Mật khẩu</span>
+                <div style="position: relative">
+                  <input
+                    id="password-register"
+                    type="password"
+                    placeholder="Mật khẩu"
+                    class="pass-input text-input"
+                  />
+                  <span class="eye eye-register"
+                    ><i class="fa-solid fa-eye"></i
+                  ></span>
+                </div>
+                <div class="warning warning-password-register"></div>
+              </label>
+              <div style="color: #666; margin: 16px 0">
+                Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi
+                <a
+                  class="forget-pass"
+                  style="color: #2361ff; font-weight: 600; font-style: normal"
+                  href="#"
+                  >điều kiện về qui định và chính sách của HPC</a
+                >
+              </div>
+              <div class="btn">
+                <button class="btn-register btn">Đăng kí</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form-register -->
+        </div>
+      </div>
+    </div>
+    <button class="btn-click">Đăng nhập</button>
+    <script src="./script.js"></script>
+  </body>
+</html>
