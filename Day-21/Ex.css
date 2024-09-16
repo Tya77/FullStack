@@ -155,3 +155,15 @@ input {
 .active {
   display: block;
 }
+.fa-eye-slash{
+  display: none;
+}
+.fa-eye-slash.active{
+  display: block;
+}
+.fa-eye{
+  display: none;
+}
+.fa-eye.active{
+  display: block;
+}
