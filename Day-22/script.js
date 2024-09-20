@@ -79,8 +79,9 @@ function addTask() {
 
 btn_add.addEventListener("click", addTask);
 // Enter
-app_input.addEventListener("keyup", function (e) {
+app_input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    addTask();
+    e.preventDefault();
+    btn_add.click();
   }
 });
