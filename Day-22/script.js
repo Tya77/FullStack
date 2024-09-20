@@ -82,6 +82,6 @@ btn_add.addEventListener("click", addTask);
 app_input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
-    btn_add.click();
+    addTask();
   }
 });
