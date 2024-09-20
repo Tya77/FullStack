@@ -8,25 +8,7 @@ const task_wrapper = document.querySelector(".task_wrapper");
 const task_input = document.querySelector(".task_input");
 const task_list = document.querySelector(".task_list");
 
-// btn_add.addEventListener("click", function () {
-//   task_wrapper.style.display = "flex";
-// });
-// edit.addEventListener("click", function () {
-//   task_form.classList.add("active");
-//   task_wrapper.style.display = "none";
-//   task_input.removeAttribute("readonly");
-// });
-// delet.addEventListener("click", function () {
-//   task_form.classList.remove("active");
-//   task_wrapper.style.display = "none";
-// });
-
-// btn_add.addEventListener("click", function () {
-//   task_input.value = app_input.value;
-//   app_input.value = "";
-// });
-
-btn_add.addEventListener("click", function () {
+function addTask() {
   const task_wrapper = document.createElement("div");
   task_wrapper.classList.add("task_wrapper");
 
@@ -67,7 +49,7 @@ btn_add.addEventListener("click", function () {
     label.style.display = "block";
     label.style.background = "#8758ff";
     label.style.paddingTop = "7.7px";
-    label.style.paddingLeft="7px"
+    label.style.paddingLeft = "7px";
   });
 
   delet.addEventListener("click", function () {
@@ -93,4 +75,12 @@ btn_add.addEventListener("click", function () {
   task_list.appendChild(task_wrapper);
 
   app_input.value = "";
+}
+
+btn_add.addEventListener("click", addTask);
+// Enter
+app_input.addEventListener("keyup", function (e) {
+  if (e.key === "Enter") {
+    addTask();
+  }
 });
