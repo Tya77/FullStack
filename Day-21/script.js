@@ -199,3 +199,13 @@ eye_slash_register.addEventListener("click", function () {
   eye_slash_register.classList.remove("active");
   i_eye_register.classList.add("active");
 });
+
+const handleCloseForm = function () {
+  form_main.classList.remove("active");
+  loginTab.classList.remove("active");
+  registerTab.classList.remove("active");
+};
+const handleOpenForm = function () {
+  form_main.classList.add("active");
+  loginTab.classList.add("active");
+};

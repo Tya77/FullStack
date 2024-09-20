@@ -139,12 +139,10 @@ input {
 .loggin.active {
   background-color: rgba(26, 121, 0, 1);
   color: #fff;
-
 }
 .register.active {
   background-color: rgba(26, 121, 0, 1);
   color: #fff;
-
 }
 .login-register.active {
   display: flex;
@@ -155,15 +153,19 @@ input {
 .active {
   display: block;
 }
-.fa-eye-slash{
+.fa-eye-slash {
   display: none;
 }
-.fa-eye-slash.active{
+.fa-eye-slash.active {
   display: block;
 }
-.fa-eye{
+.fa-eye {
   display: none;
 }
-.fa-eye.active{
+.fa-eye.active {
   display: block;
+}
+.login,
+.register {
+  display: none;
 }
