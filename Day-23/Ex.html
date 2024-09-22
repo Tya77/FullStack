@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        display: flex;
+        transition: translate 0.4s ease;
+      }
+      .carousel .carousel-nav span {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        width: 40px;
+        height: 40px;
+        background: gray;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .carousel .carousel-nav span.prev {
+        left: 5px;
+      }
+      .carousel .carousel-nav span.next {
+        right: 5px;
+      }
+      .dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        gap: 10px;
+      }
+      .dot {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot.active {
+        background: goldenrod;
+      }
+      .dot:hover {
+        background: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/426/1800/800.jpg?hmac=3S3ZY2LNoA7ouyZoRRFepgzgwqUe73VeK-kwEcozClY"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/426/1800/800.jpg?hmac=3S3ZY2LNoA7ouyZoRRFepgzgwqUe73VeK-kwEcozClY"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/426/1800/800.jpg?hmac=3S3ZY2LNoA7ouyZoRRFepgzgwqUe73VeK-kwEcozClY"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <span class="prev">&lt;</span>
+        <span class="next">&gt;</span>
+      </div>
+      <div class="dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+    </div>
+    <script src="./Ex.js"></script>
+  </body>
+</html>
