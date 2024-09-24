@@ -1,86 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
-  padding: 0;
+  font-family: "Poppins", sans-serif;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
-  align-items: center;
   background: #8758ff;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-input {
-  border: none;
-}
-.app {
+
+.App {
   text-align: center;
 }
-.app_wrapper {
-  background: #1a1a40;
-  border-radius: 5px;
-  margin-top: 80px;
-  padding: 32px;
-}
+
 h1 {
   color: #fff;
-  font-size: 1.75rem;
   margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
-.app_form {
+
+.TodoWrapper {
+  background: #1a1a40;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TodoForm {
   width: 100%;
-  margin-top: 30px;
-  display: flex;
 }
-.app_input {
+
+.todo-input {
+  outline: none;
   background: none;
   border: 1px solid #8758ff;
-  color: #fff;
-  outline: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   width: 300px;
+  color: #fff;
 }
-.btn_add,.btn_task {
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn {
   background: #8758ff;
   color: #fff;
-  cursor: pointer;
   border: none;
-  padding: 6.8px;
-}
-input::placeholder {
-  font-weight: 600;
-}
-.task_wrapper {
-  align-items: center;
-  border-radius: 5px;
-  display: flex;
-  /* display: none; */
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding: 12px 16px;
-  background: #8758ff;
-  color: #fff;
+  padding: 0.55rem;
   cursor: pointer;
-  margin-top: 30px;
-  /* padding: 4px 16px; */
-  /* gap: 10px; */
 }
-.icon {
+
+.Todo {
   display: flex;
-  gap: 12px;
-}
-.task_wrapper input {
+  justify-content: space-between;
+  align-items: center;
   background: #8758ff;
-  outline: none;
   color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
-.task_form {
-  display: none;
+
+.fa-trash {
+  margin-left: 0.75rem;
 }
-.task_form.active {
-  display: flex;
-  margin-top: 30px;
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
 }
-.task_wrapper.active{
-    display: flex;
+
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
 }
