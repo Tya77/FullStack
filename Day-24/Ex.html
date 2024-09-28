@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 24</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: 0;
+        background-color: #130c1c;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        color: #fff;
+      }
+
+      .player {
+        display: flex;
+        align-items: center;
+      }
+
+      .play-btn {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #fff;
+      }
+      .progress-bar {
+        width: 100%;
+        position: relative;
+        height: 10px;
+        background: gray;
+        margin: 0 20px;
+        cursor: pointer;
+        border-radius: 99px;
+      }
+      .progress-bar:hover {
+      }
+      .progress-bar .progress {
+        position: absolute;
+        background: #fff;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 99px;
+      }
+
+      .progress-bar .progress span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        display: block;
+        border-radius: 50%;
+        background: #fff;
+        translate: 50% -50%;
+      }
+
+      .karaoke {
+        padding: 15px 0;
+      }
+
+      .karaoke .play {
+        background: blueviolet;
+        color: #fff;
+        padding: 5px 10px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        border: 0;
+      }
+
+      .karaoke .karaoke-inner {
+        background: blueviolet;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: bold;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        top: 100%;
+        transition: top 0.4s ease;
+      }
+
+      .karaoke.show .karaoke-inner {
+        top: 0;
+      }
+
+      .karaoke .karaoke-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .karaoke .karaoke-heading {
+        font-size: 1.5rem;
+      }
+
+      .karaoke .karaoke-heading .close {
+        cursor: pointer;
+      }
+
+      .karaoke .karaoke-content {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .karaoke .karaoke-content p {
+        margin: 10px 0;
+        position: relative;
+        white-space: nowrap;
+      }
+
+      .karaoke .karaoke-content p span {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        overflow: hidden;
+        color: yellowgreen;
+        text-align: left;
+      }
+
+      .player-wrap.bottom {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        z-index: 101;
+        color: #fff;
+      }
+      .player-wrap.bottom .progress-bar .progress span {
+        background: #fff;
+      }
+      .time_hover {
+        position: absolute;
+        padding: 5px;
+        background: #333333d1;
+        color: #fff;
+        border-radius: 4px;
+        top: -30px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="play-btn">
+        <i class="fa-solid fa-play"></i>
+      </div>
+      <div class="player">
+        <span>00:00</span>
+        <div class="progress-bar">
+          <div class="progress">
+            <span></span>
+          </div>
+          <span class="time_hover"></span>
+        </div>
+        <span>00:00</span>
+      </div>
+    </div>
+    <audio class="audio" src="./mp3/MTP.mp3"></audio>
+    <script src="./Ex.js"></script>
+  </body>
+</html>
