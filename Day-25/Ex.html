@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 25</title>
+    <style>
+      button {
+        cursor: pointer;
+      }
+      body {
+        text-align: center;
+      }
+      .table_cart {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>DANH SÁCH SẢN PHẨM</h2>
+    <table class="table_list" border="1" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th style="width: 5%">STT</th>
+          <th>Tên sản phẩm</th>
+          <th style="width: 10%">Giá</th>
+          <th style="width: 10%">Thêm vào giỏ</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <!-- <tbody>
+        <tr>
+          <td>1</td>
+          <td>Sản phẩm 1</td>
+          <td>1000</td>
+          <td>
+            <input type="number" value="1" class="quantity" />
+            <button style="width: 100%" class="btn_add">Thêm vào giỏ</button>
+          </td>
+        </tr>
+      </tbody> -->
+      <!-- <tbody>
+        <tr>
+          <td>2</td>
+          <td>Sản phẩm 2</td>
+          <td>2000</td>
+          <td>
+            <input type="number" value="1" class="quantity" />
+            <button style="width: 100%" class="btn_add">Thêm vào giỏ</button>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>3</td>
+          <td>Sản phẩm 3</td>
+          <td>3000</td>
+          <td>
+            <input type="number" value="1" class="quantity" />
+            <button style="width: 100%" class="btn_add">Thêm vào giỏ</button>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>Sản phẩm 4</td>
+          <td>4000</td>
+          <td>
+            <input type="number" value="1" class="quantity" />
+            <button style="width: 100%" class="btn_add">Thêm vào giỏ</button>
+          </td>
+        </tr>
+      </tbody> -->
+    </table>
+    <h2>GIỎ HÀNG</h2>
+    <!-- <h3>Giỏ hàng không có sản phẩm</h3> -->
+    <div class="cart_data"></div>
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      border="1"
+      class="table_cart"
+    >
+      <!-- <thead>
+        <tr>
+          <th width="5%">STT</th>
+          <th>Tên sản phẩm</th>
+          <th width="20%">Giá</th>
+          <th width="20%">Số lượng</th>
+          <th width="20%">Thành tiền</th>
+          <th width="5%">Xoá</th>
+        </tr>
+      </thead> -->
+    </table>
+    <div class="btn_cart">
+      <button class="updateAll_cart">Cập nhật giỏ hàng</button>
+      <button class="deleteAll_cart">Xóa giỏ hàng</button>
+    </div>
+    <script src="./Ex.js"></script>
+  </body>
+</html>
