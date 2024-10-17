@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 28</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Doc Editor</h2>
+      <div class="toolbar">
+        <div class="head">
+          <select class="select">
+            <option value="" selected="" hidden="" disabled="">File</option>
+            <option value="new">New file</option>
+            <option value="txt">Save as txt</option>
+            <option value="pdf">Save as pdf</option>
+          </select>
+          <input type="text" value="untitled" id="filename" />
+        </div>
+        <div class="btn-toolbar">
+          <button class="txt_bold" style="font-weight: bold">B</button>
+          <button class="txt_underline" style="text-decoration: underline">U</button>
+          <button class="txt_italic" style="font-style: italic">i</button>
+          <div class="color">
+            <input style="height: 40px;cursor: pointer;" type="color" id="color" />
+          </div>
+        </div>
+      </div>
+      <div class="content" contenteditable="true" spellcheck="false"></div>
+      <div style="display: flex; gap: 10px; justify-content: end">
+        <span class="char">Số ký tự: 0</span>
+        <span class="word">Số từ: 0</span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  cursor: pointer;
+}
+h2 {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  margin: 10px 90px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+.toolbar .head {
+  display: flex;
+  grid-gap: 10px;
+  margin-bottom: 16px;
+}
+.toolbar .head > input {
+  max-width: 130px;
+  padding: 6px 10px;
+  border: 1px solid #333;
+  outline: none;
+}
+.toolbar .head select {
+  background-color: #0d6efd;
+  color: #fff;
+  border: 1px solid #0d6efd;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.toolbar .head select:hover {
+  background-color: #0a53be;
+  border-color: #0a53be;
+}
+.color {
+  background: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.toolbar .head .color span {
+  font-size: 14px;
+}
+.toolbar .head .color input {
+  border: none;
+  height: 100%;
+  width: 45px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.toolbar .btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+}
+.toolbar .btn-toolbar button {
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.toolbar .btn-toolbar button:hover {
+  opacity: 0.9;
+}
+.content {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+  min-height: 300px;
+  outline: none;
+  padding: 20px;
+}
