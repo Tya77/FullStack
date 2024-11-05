@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "./imgs/img1.webp",
+      "title": "Thật vô lý khi người bệnh phải gánh lãi vay xây bệnh viện",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci. Magni fugit sapiente laboriosam corporis illomaiores explicabo maxime minima commodi cum, dolor unde! Temporerem veniam doloremque"
+    },
+    {
+      "id": 2,
+      "image": "./imgs/img2.webp",
+      "title": "Thanh niên Trung Quốc chào đón Thủ tướng bằng điệu múa Vân Nam đặc sắc",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci. Magni fugit sapiente laboriosam corporis illomaiores explicabo maxime minima commodi cum, dolor unde! Temporerem veniam doloremque"
+    },
+    {
+      "id": 3,
+      "image": "./imgs/img3.webp",
+      "title": "Thủ tướng lên đường sang Trung Quốc dự nhiều hội nghị cấp cao",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum remaccusamus adipisci. Magni fugit sapiente laboriosam corporis illomaiores explicabo maxime minima commodi cum, dolor unde! Temporerem veniam doloremque"
+    }
+  ]
+}

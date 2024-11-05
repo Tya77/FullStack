@@ -40,10 +40,14 @@ const postTodo = async (data) => {
 };
 
 const deleteTodo = async (id) => {
+  console.log(id);
+
   const response = await fetch(`${SERVERAPI}/${id}`, {
     method: "DELETE",
   });
+
   return response.json();
+  
 };
 
 const updateTodo = async (id, data) => {
@@ -84,7 +88,7 @@ async function render() {
     todosList.appendChild(todoItem);
   });
   
-  const btnDelete = document.querySelectorAll(".btn-delete");
+  const btnDeletes = document.querySelectorAll(".btn-delete");
   // btnDelete.addEventListener("click", async (event) => {
   //   const currentTodoItem = event.target.closest(".todo-item");
   //   const id = currentTodoItem.getAttribute("data-id"); // Lấy id từ thuộc tính data-id của todoItem
@@ -95,7 +99,8 @@ async function render() {
   //     console.error("ID không hợp lệ:", id); // Xử lý lỗi
   //   }
   // });
-  
+  console.log(btnDeletes);
+  Array.isArray(btnDeletes)
 }
 
 btnSave.addEventListener("click", async () => {
@@ -112,5 +117,4 @@ btnSave.addEventListener("click", async () => {
   render();
 });
 
-deleteTodo();
 render();
