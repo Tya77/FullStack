@@ -1,4 +1,3 @@
-const loading = document.querySelector(".loading");
 const blogList = document.querySelector(".blog-wrapper");
 const scrollWrap = document.querySelector(".scroll-wrapper");
 
@@ -26,13 +25,11 @@ const render = (posts) => {
     `;
     blogList.appendChild(blog);
   });
-  loading.classList.remove("active");
 };
 
 function loadMoreContent() {
   if (isLoading) return;
   isLoading = true;
-  loading.classList.add("active");
   getPosts();
 }
 
@@ -44,10 +41,9 @@ const getPosts = async () => {
     render(data);
     page++;
   } else {
-    console.log("Không còn bài viết để tải.");
+    console.log("Không còn bài viết để tải");
   }
   isLoading = false;
-  loading.classList.remove("active");
 };
 
 scrollWrap.addEventListener("scroll", function () {
