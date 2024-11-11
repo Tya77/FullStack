@@ -1,120 +1,176 @@
-const SERVERAPI = `http://localhost:3000/todoList`;
+import { client } from "./client.js";
 
-const btnCompleted = document.querySelector(".btn-completed");
-const arrow = document.querySelector(".btn-completed i");
+const formSearch = document.querySelector(".form-search");
+const inputSearch = document.querySelector(".form-search input");
 const btnAdd = document.querySelector(".btn-add");
-const add = document.querySelector(".add");
 const btnSave = document.querySelector(".btn-save");
 const btnCancel = document.querySelector(".btn-cancel");
-const addInput = document.querySelector(".form-add input");
-const task_list = document.querySelector(".task-list");
+const btnCompleted = document.querySelector(".btn-completed");
+const popup = document.querySelector(".popup");
+const overlay = document.querySelector(".overlay");
+const listTodoNotComplete = document.querySelector(".not-complete");
+const listTodoComplete = document.querySelector(".completed");
+const inputAddTodo = document.querySelector(".add-todo");
+const loading = document.querySelector(".loading");
+
+var isEdit = false;
+
+formSearch.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+const addPopup = () => {
+  popup.classList.add("active");
+  overlay.classList.add("active");
+};
+
+const removePopup = () => {
+  popup.classList.remove("active");
+  overlay.classList.remove("active");
+  inputAddTodo.value = "";
+};
+btnAdd.addEventListener("click", addPopup);
+btnCancel.addEventListener("click", removePopup);
 
 btnCompleted.addEventListener("click", function () {
-  arrow.classList.toggle("active");
-  btnCompleted.classList.toggle("active");
+  this.classList.toggle("active");
 });
+const renderTodo = async () => {
+  loading.style.display = "block";
+  try {
+    //  Gọi API để lấy dữ liệu danh sách công việc
 
-btnAdd.addEventListener("click", function () {
-  add.classList.add("active");
-});
-btnCancel.addEventListener("click", function () {
-  add.classList.remove("active");
-});
+    // todos chứa các công việc chưa hoàn thành
+    const { data: todos } = await client.get("/todoList?completed=false");
+    // todosNot chứa công việc đã hoàn thành
+    const { data: todosNot } = await client.get("/todoList?completed=true");
 
-async function getTodo() {
-  const response = await fetch(`${SERVERAPI}`);
-  const data = await response.json();
-  return data;
-}
+    const html = todos
+      .map(
+        (todoList) => `
+    <div class="todo-item" data-id="${todoList.id}">
+      <span class="title-todo">${todoList.title}</span>
+      <div class="list-action">
+        <button class="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
+        <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button class="btn-check"><i class="fa-solid fa-square-check"></i></button>  
+      </div>
+    </div>
+  `
+      )
+      .join("");
+    const htmlNot = todosNot
+      .map(
+        (todoList) => `
+  <div class="todo-item" data-id="${todoList.id}">
+    <span class="title-todo">${todoList.title}</span>
+    <div class="list-action">
+      <button class="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
+      <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+      <button class="btn-done"><i class="fa-solid fa-square-check"></i></button>  
+    </div>
+  </div>
+`
+      )
+      .join("");
+    listTodoNotComplete.innerHTML = html;
+    listTodoComplete.innerHTML = htmlNot;
 
-const postTodo = async (data) => {
-  const response = await fetch(`${SERVERAPI}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-  const result = await response.json();
-  return result;
+    btnCompleted.innerHTML = `Completed Todos ${todosNot.length} <i class="fa-regular fa-circle-right"></i>`;
+    const deleteButtons = document.querySelectorAll(".btn-delete");
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const todoId = button.closest(".todo-item").getAttribute("data-id");
+        deleteTodo(todoId);
+      });
+    });
+
+    const editButtons = document.querySelectorAll(".btn-edit");
+    editButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        isEdit = true;
+        const todoId = button.closest(".todo-item").getAttribute("data-id");
+        addPopup();
+        if (isEdit) {
+          inputAddTodo.value = button
+            .closest(".todo-item")
+            .querySelector(".title-todo").innerText;
+          btnSave.addEventListener("click", function () {
+            updateTodo(todoId, inputAddTodo.value);
+            removePopup();
+          });
+        }
+      });
+    });
+
+    const completeBtns = document.querySelectorAll(".btn-check");
+    completeBtns.forEach((completeBtn, i) => {
+      completeBtn.addEventListener("click", async (e) => {
+        const { data } = await client.get("/todoList?completed=false");
+        updateTodo(data[i].id, data[i].title, true);
+      });
+    });
+    const btnDones = document.querySelectorAll(".btn-done");
+    btnDones.forEach((btn, i) => {
+      btn.addEventListener("click", async (e) => {
+        const { data } = await client.get("/todoList?completed=true");
+        updateTodo(data[i].id, data[i].title, false);
+      });
+    });
+  } catch (error) {
+    console.error("Fetch error:", error);
+  } finally {
+    loading.style.display = "none";
+  }
 };
+renderTodo();
 
 const deleteTodo = async (id) => {
-  console.log(id);
-
-  const response = await fetch(`${SERVERAPI}/${id}`, {
-    method: "DELETE",
-  });
-
-  return response.json();
-  
+  const { response } = await client.delete(`/todoList/${id}`);
+  renderTodo();
 };
 
-const updateTodo = async (id, data) => {
-  const response = await fetch(`${SERVERAPI}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
+const addTodo = async () => {
+  popup.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    if (!isEdit) {
+      let value = inputAddTodo.value;
+      value = value;
+
+      removePopup();
+      inputAddTodo.value = "";
+      const { response } = await client.post("/todoList", {
+        title: value,
+        completed: false,
+      });
+      renderTodo();
+    }
   });
-  return response.json();
+};
+addTodo();
+
+const updateTodo = async (id, value, isCompleted = false) => {
+  value = value;
+
+  const { response } = await client.put(`/todoList/${id}`, {
+    title: value,
+    completed: isCompleted,
+  });
+  renderTodo();
 };
 
-async function render() {
-  const data = await getTodo();
-  console.log(data);
-
-  const todosList = document.querySelector(".todos-list");
-  data.forEach((item) => {
-    const todoItem = document.createElement("div");
-    todoItem.className = "todo-item";
-    todoItem.setAttribute("data-id", item.id);
-    todoItem.innerHTML = `
-        <span>${item.title}</span>
-        <div class="item-actions">
-            <button class="btn-delete" data-id="${item.id}">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-            <button class="btn-edit">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="btn-check">
-                <i class="fa-solid fa-square-check"></i>
-            </button>
-        </div>
-    `;
-
-    todosList.appendChild(todoItem);
+function handleSearch() {
+  inputSearch.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    const todos = document.querySelectorAll(".todo-item");
+    todos.forEach((todo) => {
+      const title = todo.querySelector(".title-todo").textContent.toLowerCase();
+      if (title.indexOf(value) === -1) {
+        todo.classList.add("hide");
+      } else {
+        todo.classList.remove("hide");
+      }
+    });
   });
-  
-  const btnDeletes = document.querySelectorAll(".btn-delete");
-  // btnDelete.addEventListener("click", async (event) => {
-  //   const currentTodoItem = event.target.closest(".todo-item");
-  //   const id = currentTodoItem.getAttribute("data-id"); // Lấy id từ thuộc tính data-id của todoItem
-  //   if (id) {
-  //     await deleteTodo(id); // Gọi hàm để xóa todo item
-  //     render(); // Render lại danh sách sau khi xóa
-  //   } else {
-  //     console.error("ID không hợp lệ:", id); // Xử lý lỗi
-  //   }
-  // });
-  console.log(btnDeletes);
-  Array.isArray(btnDeletes)
 }
-
-btnSave.addEventListener("click", async () => {
-  const valueInput = addInput.value.trim();
-  if (!valueInput) return;
-  let count = 0;
-  const data = {
-    // id: count++,
-    title: valueInput,
-  };
-  await postTodo(data);
-  addInput.value = "";
-  add.classList.remove("active");
-  render();
-});
-
-render();
+handleSearch();
