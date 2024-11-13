@@ -8,10 +8,6 @@ textarea,
 button {
   outline: none;
 }
-body{
-    display: flex;
-    justify-content: center;
-}
 
 .lb_title {
   margin-top: 8px;
