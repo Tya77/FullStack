@@ -1,4 +1,3 @@
-
 import { client } from "./client.js";
 import { requestRefresh } from "./token.js";
 
@@ -21,6 +20,7 @@ const getProfile = async () => {
   if (tokens) {
     const { access_token: accessToken, refresh_token: refreshToken } =
       JSON.parse(tokens);
+
     if (!accessToken) {
       handleLogout();
     } else {
@@ -94,6 +94,26 @@ const render = () => {
         <li>Chào bạn: <span class="name">Loading...</span></li>
         <li><a href="#" class="logout">Đăng xuất</a></li>
     </ul>
+    </div>
+    <form action="" class="post_wrapper">
+      <div class="textarea-group column">
+        <label for="" class="lb_textarea">Enter Your content</label>
+        <textarea
+          name="content"
+          class="border"
+          placeholder="Content here"
+        ></textarea>
+      </div>
+      <div class="form_setTime">
+        <!-- <label for="" class="lb_setTime">Set time to post</label> -->
+        <div class="setTime_wrapper">
+          <input class="" type="date" name="" id="" autocomplete="off">
+        </div>
+      </div>
+      <button type="submit" class="btn_write">Write new!</button>
+    </form>
+    <div class="blog_wrapper">
+    
     </div>
     `;
     getProfile();
@@ -246,4 +266,84 @@ const handleLogin = async (data) => {
   loading("remove");
 };
 
+const handlePost = async (data) => {
+  const blogContainer = document.querySelector(".blog");
+
+  // Định dạng thời gian hiện tại để hiển thị
+  const currentDate = new Date();
+  const dateFormatted = currentDate.toLocaleString("vi-VN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+
+  const displayDate = data.date
+    ? new Date(data.date).toLocaleDateString("vi-VN", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : dateFormatted;
+  // Thay thế nội dung trong phần post với dữ liệu mới
+  // Tạo phần tử mới cho bài viết
+  const newBlogPost = document.createElement("div");
+  const blogWrapper = document.querySelector(".blog_wrapper");
+
+  newBlogPost.classList.add("blog");
+
+  // Nội dung bài viết
+  newBlogPost.innerHTML = `
+    <div class="blog_header">
+      <img src="https://picsum.photos/150/150" alt="Avatar"/>
+      <div class="blog_info">
+        <h3>${data.name}</h3>
+        <p>${displayDate}</p>
+      </div>
+    </div>
+    <div class="blog_content">
+      <p>${data.content}</p>
+    </div>
+  `;
+
+  // Thêm bài viết mới vào .blog_wrapper
+  blogWrapper.appendChild(newBlogPost);
+  savePostToLocalStorage(data);
+};
+
+const savePostToLocalStorage = (data) => {
+  let posts = JSON.parse(localStorage.getItem("posts")) || [];
+  posts.push(data);
+  localStorage.setItem("posts", JSON.stringify(posts));
+};
+
+// Xử lý sự kiện form "Write new!" để tạo bài viết
+const eventPostForm = () => {
+  const postForm = document.querySelector(".post_wrapper");
+
+  postForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const contentEl = e.target.querySelector("textarea[name='content']");
+    const dateEl = e.target.querySelector("input[type='date']");
+
+    const content = contentEl.value;
+    const date = dateEl.value;
+
+    const profileName = document.querySelector(".profile .name").innerText;
+
+    // Gọi hàm handlePost để xử lý và hiển thị bài viết mới
+    handlePost({ name: profileName, content, date });
+
+    // Xóa nội dung trong form sau khi submit
+    contentEl.value = "";
+    dateEl.value = "";
+  });
+};
+
+// Gọi hàm eventPostForm sau khi render xong giao diện
 render();
+eventPostForm();
