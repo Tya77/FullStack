@@ -1,46 +1,56 @@
 import { client } from "./client.js";
 import { requestRefresh } from "./token.js";
-
-client.setUrl("https://api.escuelajs.co/api/v1");
+// import { requestRefresh } from "./token.js";
 
 const root = document.querySelector("#root");
 
 const isLogin = () => {
-  const tokens = localStorage.getItem("login_token");
+  const tokens = localStorage.getItem("accessToken");
   return !!tokens;
 };
 
 const handleLogout = () => {
-  localStorage.removeItem("login_token");
+  localStorage.removeItem("accessToken");
   render();
 };
 
 const getProfile = async () => {
-  const tokens = localStorage.getItem("login_token");
+  const tokens = localStorage.getItem("accessToken");
   if (tokens) {
-    const { access_token: accessToken, refresh_token: refreshToken } =
-      JSON.parse(tokens);
+    // if (!accessToken) {
+    //   handleLogout();
+    // } else {
+    client.setToken(tokens);
+    console.log(tokens);
 
-    if (!accessToken) {
-      handleLogout();
-    } else {
-      client.setToken(accessToken);
-      const { response, data } = await client.get("/auth/profile");
-      if (!response.ok) {
-        const { data: newToken } = await requestRefresh(refreshToken);
-        if (newToken) {
-          localStorage.setItem("login_token", JSON.stringify(newToken));
-          getProfile();
-        } else {
-          handleLogout();
-        }
+    const { response, data } = await client.get("/users/profile");
+    if (!response.ok) {
+      const refreshToken = localStorage.getItem("refreshToken");
+      console.log({ refreshToken: refreshToken });
+
+      const res = await requestRefresh({ refreshToken: refreshToken });
+      if (res?.data?.code === 200) {
+        localStorage.setItem(
+          "accessToken",
+          `${res?.data?.data?.token?.accessToken}`
+        );
+        localStorage.setItem(
+          "refreshToken",
+          `${res?.data?.data?.token?.refreshToken}`
+        );
+        window.location.reload();
       } else {
-        const profileName = document.querySelector(".profile .name");
-        profileName.innerText = data.name;
+        localStorage.removeItem("refreshToken");
+        localStorage.removeItem("accessToken");
+        window.location.reload();
       }
+    } else {
+      const profileName = document.querySelector(".profile .name");
+      profileName.innerText = data?.data?.name;
     }
   }
 };
+// };
 
 const eventLogin = () => {
   const loginForm = document.querySelector(".login");
@@ -205,22 +215,8 @@ const handleSignUp = async (data) => {
   }
 
   try {
-    const response = await fetch("https://api.escuelajs.co/api/v1/users/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: data.name,
-        email: data.email,
-        password: data.password,
-        avatar: "https://api.lorem.space/image/face?w=150&h=220",
-      }),
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
+    const res = await client.post(`/auth/register`, data);
+    if (res.response?.ok) {
       alert("Đăng ký thành công! Vui lòng đăng nhập.");
       render();
     } else {
@@ -256,13 +252,17 @@ const handleLogin = async (data) => {
   const msg = document.querySelector(".msg");
   msg.innerText = ``;
   loading();
-  const { data: tokens, response } = await client.post("/auth/login", data);
-  if (response.ok) {
-    localStorage.setItem("login_token", JSON.stringify(tokens));
+  const res = await client.post("/auth/login", data);
+  if (res.response.ok) {
+    localStorage.setItem("accessToken", `${res?.data?.data?.accessToken}`);
+    localStorage.setItem("refreshToken", `${res?.data?.data?.refreshToken}`);
+
     render();
   } else {
     msg.innerText = `Thông tin đăng nhập không hợp lệ`;
   }
+  console.log(res);
+
   loading("remove");
 };
 

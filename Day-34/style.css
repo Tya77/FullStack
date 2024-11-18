@@ -136,7 +136,6 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
 }
 .blog {
   width: 100%;

@@ -1,6 +1,7 @@
 // Build Http Client
 
 import { config } from "./config.js";
+import { requestRefresh } from "./token.js";
 const { SERVER_API } = config;
 
 export const client = {
@@ -21,6 +22,8 @@ export const client = {
     const headers = {
       "Content-Type": "application/json",
     };
+    console.log(url);
+
     if (this.token) {
       headers["Authorization"] = `Bearer ${this.token}`;
     }
@@ -33,6 +36,26 @@ export const client = {
     }
 
     const response = await fetch(url, options);
+    // if (this.token && response.status === 401) {
+    //   const refreshToken = localStorage.getItem("refreshToken");
+    //   const res = await requestRefresh({ refreshToken: refreshToken });
+    //   console.log(res);
+    //   if (res?.data?.code === 200) {
+    //     localStorage.setItem(
+    //       "accessToken",
+    //       `${res?.data?.data?.token?.accessToken}`
+    //     );
+    //     localStorage.setItem(
+    //       "refreshToken",
+    //       `${res?.data?.data?.token?.refreshToken}`
+    //     );
+    //     return this.send(url, method, body);
+    //   } else {
+    //     localStorage.removeItem("refreshToken");
+    //     localStorage.removeItem("accessToken");
+    //     window.location.href="/"
+    //   }
+    // }
 
     const data = await response.json();
 
